@@ -1,6 +1,9 @@
 .sounds {
   position: absolute;
-  left: 50%;
-  right: 50%;
-  bottom: 30px;
+  left: 1.2rem;
+  bottom: 1.2rem;
+  outline-color: rgba(0,0,0,0);
+  svg {
+    opacity: .8;
+  }
 }
