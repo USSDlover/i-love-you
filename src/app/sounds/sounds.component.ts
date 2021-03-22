@@ -42,15 +42,19 @@ export class SoundsComponent implements OnInit, OnDestroy {
   }
 
   onSaidILoveYou(): void {
-    this.relaxing.nativeElement.volume = .8;
-    this.heartBeat.nativeElement.volume = .8;
+    if (this.played) {
+      this.relaxing.nativeElement.volume = .8;
+      this.heartBeat.nativeElement.volume = .8;
+    }
   }
 
   private onSayILoveYou(): void {
     this.iLoveYouSub = this.sayILoveYou
       .subscribe(() => {
-        this.relaxing.nativeElement.volume = .2;
-        this.heartBeat.nativeElement.volume = .2;
+        if (this.played) {
+          this.relaxing.nativeElement.volume = .2;
+          this.heartBeat.nativeElement.volume = .2;
+        }
         this.iLoveYou.nativeElement.play();
       });
   }
