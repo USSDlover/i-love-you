@@ -14,6 +14,7 @@ export class SoundsComponent implements OnInit, OnDestroy {
   @ViewChild('heartBeat', {static: true}) heartBeat: ElementRef;
 
   private iLoveYouSub: Subscription;
+  private sayingILoveYou: boolean;
 
   played: boolean;
 
@@ -46,6 +47,7 @@ export class SoundsComponent implements OnInit, OnDestroy {
       this.relaxing.nativeElement.volume = .8;
       this.heartBeat.nativeElement.volume = .8;
     }
+    this.sayingILoveYou = false;
   }
 
   private onSayILoveYou(): void {
@@ -55,7 +57,10 @@ export class SoundsComponent implements OnInit, OnDestroy {
           this.relaxing.nativeElement.volume = .2;
           this.heartBeat.nativeElement.volume = .2;
         }
-        this.iLoveYou.nativeElement.play();
+        if (!this.sayingILoveYou) {
+          this.sayingILoveYou = true;
+          this.iLoveYou.nativeElement.play();
+        }
       });
   }
 
