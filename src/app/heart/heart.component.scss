@@ -18,6 +18,8 @@ $heart: #db0e0e;
   transform: rotate(-45deg);
   animation: pulse 1s infinite;
   box-shadow: 0 0 20px 2px $heart;
+  touch-action: manipulation;
+  -ms-touch-action: manipulation;
 }
 .heart::before,
 .heart::after {
