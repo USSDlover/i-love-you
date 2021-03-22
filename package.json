@@ -1,6 +1,6 @@
 {
   "name": "i-love-you",
-  "version": "0.0.0",
+  "version": "1.4.25",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",

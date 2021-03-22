@@ -1,16 +1,20 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
-import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { RainComponent } from './rain/rain.component';
+import { HeartComponent } from './heart/heart.component';
+import { SoundsComponent } from './sounds/sounds.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    RainComponent,
+    HeartComponent,
+    SoundsComponent
   ],
   imports: [
-    BrowserModule,
-    AppRoutingModule
+    BrowserModule
   ],
   providers: [],
   bootstrap: [AppComponent]

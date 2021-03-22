@@ -1,1 +1,14 @@
 /* You can add global styles to this file, and also import other style files */
+body, html {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  overflow: hidden;
+
+  background: linear-gradient(to bottom, #a31d584d, #db146f9e);
+  //background: linear-gradient(to bottom, #202020, #111119);
+}
